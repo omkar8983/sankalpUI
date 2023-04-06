@@ -18,6 +18,27 @@
   src: url("../fonts/DaytonaPro-Bold.ttf");
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
 body {
   font-family: gb;
   font-size: 16px;
@@ -151,6 +172,7 @@ body {
   font-weight: 600;
   margin-bottom: 0.5em;
 }
+
 
 .cont-1 {
   background-color: white;
@@ -661,6 +683,85 @@ margin-top: 8px;
 .collapse{
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
+}
+.contact-wrap{
+  background-image: url(../images/contact-bg.jpg);
+  height: 85vh;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.contact-info-wrap{
+display: flex;
+flex-direction: row;
+align-items: center;
+color: #fff;
+font-size: 1.2em;
+margin-bottom: 30px;
+}
+
+.icon-wrap{
+  width: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px 10px;
+  filter: grayscale(1);
+
+}
+
+.contact-text-wrap{
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+
+}
+
+.contact-detail{
+  height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.form-wrap{
+  height: 80%;
+  background-color: #fff;
+  width: 70%;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: rgb(64 64 64) 0px 5px 15px;
+}
+.msg-box{
+margin-bottom: 20px;
+margin-top: 10px;
+width: 100%;
+border: none;
+border-bottom: 2px solid #616161;
+}
+
+.sub-form{
+  padding: 5px 15px;
+}
+
+.contact-page-heading {
+  font-size: 2.2em;
+  color: rgb(255, 255, 255);
+  font-family: gb;
+  font-weight: 600;
+ 
+}
+
+.sub-form{
+  background-color: rgb(9 121 143);
+  color: #fff;
+  font-size: 0.8em;
+  border-radius: 8px;
+  padding: 8px 35px;
+  font-weight: 400;
+  font-size: 1.1em;
+  outline: none;
+  border: none;
 }
 @media screen and (min-width: 390px) and (max-width: 780px) {
   .logo2 {
