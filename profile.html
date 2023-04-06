@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 
@@ -13,8 +15,8 @@
     <link href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/nav.css">
-
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/profile.css">
     <script src="js/modernizr.js"></script>
     <title>Sankalp</title>
         <!-- Gtag code -->
@@ -33,6 +35,7 @@
 </head>
 
 <body>
+
 
     <div class="container-fluid" class="logo-wrap" style="">
         <div class="row head-wrap">
@@ -70,52 +73,88 @@
 
 
     <main class="cd-main-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="">
-
-                    </div>
-                    <ul class="prof">
-
-                        <li class="profile-img">
-
-                        </li>
-                        <li>
-                            Name :
-                        </li>
-
-                        <li>
-                            Designation :
-                        </li>
-<hr>
-                    </ul>
-                    <div class="cont">
-                    <ul class="prof2">
-                        <h1>Contact Details</h1>
-                        <li>
-                            Email ID :
-                        </li>
-
-                        <li>
-                            Employee ID :
-                        </li>
-                    </ul>
-
-                    <ul class="prof2">
-                        <h1>Personal details</h1>
-                        <li>
-                            DOB :
-                        </li>
-
-                        <li>
-                             Maritial Status
-                        </li>
-                    </ul>
-                </div>
-                </div>
-            </div>
-        </div>
+		<div class="container">
+			<div class="">
+				<div class="profile_wrap row">
+					<div class="col-md-3">
+						<div class="img_sec">
+							<img src="images/man.png"/>
+						</div>
+					</div>
+					<div class="col-md-9">
+				<div class="text_sec">
+						<h1 class="head">Dr. Atul Mishra</h1>
+						<p class="subhead">Lead, Medico-Marketing | Medical Affairs </p>
+						<div class="lsec">
+							<div class="row">
+								<div class="col-md-6">
+									<p>Sankalp Enrolment No:</p>
+								</div>
+								<div class="col-md-6">
+									<span>ALPCN23001</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>Sankalp Login ID:</p>
+								</div>
+								<div class="col-md-6">
+									<span>atul.mishra@signatura.com</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>Signatura Employee Code:</p>
+								</div>
+								<div class="col-md-6">
+									<span>00103</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>Gender:</p>
+								</div>
+								<div class="col-md-6">
+									<span>Male</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>Date Of Birth:</p>
+								</div>
+								<div class="col-md-6">
+									<span>1 August 1986</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>Mobile No:</p>
+								</div>
+								<div class="col-md-6">
+									<span>81306 82656</span>
+								</div>
+							</div>						
+							<div class="row">
+								<div class="col-md-6">
+									<p>Correspondence Address:</p>
+								</div>
+								<div class="col-md-6">
+									<span>MZ-7, Modi Tower, 98, Nehru Place, New Delhi-110019</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+					
+				</div>
+				<div class="col-md-12 text-right mt-4">
+					<a class="btn btn-primary ml-auto btnSave">Download your ID Card</a>
+				</div>
+				<div id="previewImage" style="display: none;">
+				</div>
+			</div>
+		</div>
+		
 
         <div class="cd-overlay"></div>
     </main>
@@ -168,9 +207,44 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
 
-    <script src="js/jquery-2.1.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script src="js/jquery.mobile.custom.min.js"> </script>
     <script src="js/nav-main.js"> </script>
+	<script>
+		$(document).ready(function(){
+
+			$(function () {
+  $(".btnSave").click(function () {
+	alert('1');
+   // let Canv_Widget = $(this).attr("data-id");
+    html2canvas($(".profile_wrap"), {
+      onrendered: function (canvas) {
+        saveAs(canvas.toDataURL(), "Idcard.png");
+      }
+    });
+  });
+  
+  /*Idea taken from StackOverflow */
+  
+  function saveAs(uri, filename) {
+    var link = document.createElement("a");
+    if (typeof link.download === "string") {
+      link.href = uri;
+      link.download = filename;
+      //Firefox requires the link to be in the body
+      document.body.appendChild(link);
+      //simulate click
+      link.click();
+      //remove the link when done
+      document.body.removeChild(link);
+    } else {
+      window.open(uri);
+    }
+  }
+});
+
+});
+	</script>
 </body>
 
 </html>
