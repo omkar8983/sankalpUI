@@ -1,0 +1,93 @@
+body {
+    font-family: "gb";
+    font-size: 16px;
+    background: #efeef5!important;
+}
+.nav-tabs .nav-link{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.nav-tabs{
+    border: none;
+}
+.nav-tabs .nav-link.active{
+    background: #0a6e8f;
+    color: #fff!important;
+    border: none;
+    box-shadow: rgb(0 0 0 / 15%) 0px 6px 9px, rgb(0 0 0 / 13%) 0px 6px 12px;
+}
+.nav-tabs .nav-link:hover{
+    background: #0a6e8f;
+    color: #fff!important;
+    border: none;
+    box-shadow: rgb(0 0 0 / 15%) 0px 6px 9px, rgb(0 0 0 / 13%) 0px 6px 12px;
+}
+.nav-tabs .nav-link {
+    display: block;
+    padding: 0.7rem 1.2rem;
+    background: #fff;
+}
+.assignment-wrap{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 2%;
+    border-radius: 10px;
+    color: #303030;
+    background: #fff;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.assignment-wrap h4{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.assignment-wrap h5{
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.grades{
+    font-size: 1.3em;
+    color: #13627c;
+    font-weight: 600;
+}
+.leaderboard{
+    padding: 2% 4%;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+}
+
+.leaderboard h3{
+font-size: 1.8em;
+font-weight: 600;
+}
+.leaderboard ul li{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin: 10px;
+}
+.userpic{
+    width: 20%;
+}
+.userpic img{
+width: 40px;
+}
+.username{
+width: 60%;
+justify-content: center;
+}
+.username h4{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.score{
+width: 20%;
+
+}
+.score h3{
+    font-weight: 600;
+    font-size: 1.4em!important;
+}
