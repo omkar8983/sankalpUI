@@ -28,7 +28,15 @@ body {
   color: #2e3233;
   background-color: #ffffff;
 }
+.logo-wrap {
+  min-height: 0px;
+}
 
+.head-logo {
+  width: 110px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
 @media only screen and (max-width: 1169px) {
   body.nav-on-left.overflow-hidden {
     overflow: hidden;
@@ -132,7 +140,7 @@ width: 115px!important;
 
 @media only screen and (min-width: 1170px) {
   .cd-main-header {
-    height: 8vh;
+    height: 10vh;
   }
 
   .cd-main-header::after {
@@ -619,8 +627,7 @@ width: 115px!important;
     margin-top: 10px;
     display: flex;
     align-items: center;
-    margin-right: 30px;
-
+    margin-right: 0px;
   }
 
   .cd-primary-nav::after {
@@ -669,14 +676,16 @@ width: 115px!important;
 
   .cd-primary-nav>li {
     float: left;
-    margin-left: 0.5em;
+    margin-left: 2.5em;
   }
   .cd-primary-nav>li:first-child{
     /* margin-left: 0!important; */
   }
   .cd-nav{
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
     }
 
     .user-wrap{
@@ -687,7 +696,13 @@ width: 115px!important;
       margin-left: auto;
       padding-right: 10px;
     }
-    
+    .user-name {
+      margin-right: 15px;
+      color: #185b57;
+      font-weight: 600;
+      font-size: 1.2em;
+
+    }
     .fa-user{
       background: blue;
       color: #fff;
@@ -716,9 +731,14 @@ width: 115px!important;
   }
 
   .cd-primary-nav>li>a:hover {
-    color: #69aa6f;
+    color: #036a8c;
   }
 
+  .active {
+    color: #294594 !important;
+    font-weight: 600 !important;
+  }
+  
   .cd-primary-nav>li>a.selected {
     color: #69aa6f;
     box-shadow: inset 0 -2px 0 #69aa6f;
