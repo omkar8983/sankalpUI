@@ -11,13 +11,12 @@
     border-radius: 22px;
     position: relative;
 }
-.profile_wrap::before{
-    content: '';
-    background-image: url(../images/logobg.png);
-    background-repeat: no-repeat;
+.profile-logo{
+  
+  
     position: absolute;
-    width: 300px;
-    height: 300px;
+    /* width: 300px;
+    height: 300px; */
     left: 45%;
     top: 35%;
     opacity: 0.4;

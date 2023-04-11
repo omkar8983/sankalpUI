@@ -138,6 +138,14 @@ width: 115px!important;
   width: 100%;
 }
 
+.head-wrap {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 @media only screen and (min-width: 1170px) {
   .cd-main-header {
     height: 10vh;
@@ -732,6 +740,7 @@ width: 115px!important;
 
   .cd-primary-nav>li>a:hover {
     color: #036a8c;
+    text-decoration: unset;
   }
 
   .active {
